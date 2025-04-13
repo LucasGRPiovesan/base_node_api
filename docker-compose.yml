@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: base_node_api_back-end
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: sh -c "npm install && npm run build"
+

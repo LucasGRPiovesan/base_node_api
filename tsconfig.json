@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES6",
+    "moduleResolution": "node",                      // Resolve módulos no estilo Node.js
+    "outDir": "./dist",                              // Diretório de saída dos arquivos compilados
+    "rootDir": "./src",                              // Diretório raiz dos arquivos fonte
+    "strict": true,                                  // Ativa verificações rigorosas de tipo
+    "esModuleInterop": true,                         // Habilita interoperabilidade entre módulos ES e CommonJS
+    "experimentalDecorators": true,                  // Habilita o uso de decorators (necessário para o Sequelize com TypeScript)
+    "emitDecoratorMetadata": true,                   // Emite metadados de decorators (também necessário para o Sequelize com TypeScript)
+    "forceConsistentCasingInFileNames": true,        // Garante consistência de caixa em nomes de arquivos
+    "skipLibCheck": true,                            // Pula verificação de tipos em arquivos de definição de biblioteca
+    "allowSyntheticDefaultImports": true,            // Permite importações padrão sintéticas
+    "resolveJsonModule": true                        // Permite a importação de arquivos JSON
+  },
+  "include": ["src/**/*", "index.ts"],                           // Inclui todos os arquivos TypeScript no diretório src
+  "exclude": ["node_modules", "dist"]                // Exclui os diretórios node_modules e dist
+}
+

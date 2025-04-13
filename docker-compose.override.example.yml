@@ -1,0 +1,28 @@
+services:
+  # Configuração do container do banco de dados local
+  mysql:
+    image: mysql
+    restart: always
+    container_name: mysql-example-db
+    environment:
+      MYSQL_DATABASE: base-node-api-db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  # Configuração do container da aplicação
+  app:
+    build: .
+    container_name: base-node-api-back-end
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    depends_on:
+      - mysql
+    command: sh -c "npm install && npm run dev"
+
+volumes:
+  mysql_data:
