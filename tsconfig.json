@@ -14,7 +14,7 @@
     "allowSyntheticDefaultImports": true,            // Permite importações padrão sintéticas
     "resolveJsonModule": true                        // Permite a importação de arquivos JSON
   },
-  "include": ["src/**/*", "index.ts"],                           // Inclui todos os arquivos TypeScript no diretório src
+  "include": ["src/**/*"],     // Inclui todos os arquivos TypeScript no diretório src
   "exclude": ["node_modules", "dist"]                // Exclui os diretórios node_modules e dist
 }
 
